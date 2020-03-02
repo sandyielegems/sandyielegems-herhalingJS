@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var email = prompt('Geef je email adres in', 'sandy@test.be');
+
+        if (email == null) {
+            document.write('U heeft geannuleerd');
+        } else if (email.length == 0) {
+            document.write('U heeft niks ingevuld');
+        } else if (email.indexOf('@') == -1 || email.indexOf('.') == -1 || email.indexOf(' ') == 1) {
+            document.write('Dit lijkt geen correct emailadres te zijn!');
+        } else if (email.charAt(0) != '@' && email.charAt(1) != '@') {
+            document.write('Ziet er goed uit!');
+        } else {
+            document.write('Er moeten minstens 2 tekens voor de @ staan.');
+        }
+    </script>
+</body>
+
+</html>
