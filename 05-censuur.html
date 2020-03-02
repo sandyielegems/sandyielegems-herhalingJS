@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var tekst = 'Godslastering en andere vuile woorden zullen gecensureerd worden!';
+        document.write(doc);
+
+        var woord = prompt('Welk woord wil je censureren?');
+
+        if (tekst.indexOf(woord) != -1) {
+            var nieuweTekst = tekst.substring(0, tekst.indexOf(woord)) +
+                "GECENSUREERD" +
+                tekst.substring(tekst.indexOf(woord) + woord.lenght, tekst.length);
+            document.write('<p>' + nieuweTekst + '</p>');
+        } else {
+            document.write('<br>Dat woord vind ik niet!');
+        }
+
+
+
+        // var doc = 'Dit document is een lang document maar ook een simpel document';
+
+        // function vervangen(doc, woord, nieuwewoord) {
+        //     if (doc.indexOf(woord) != -1) {
+        //         deel1 = doc.substr(0, doc.indexOf(woord) + nieuwewoord);
+        //         deel2 = doc.substring(doc.indexOf(woord) + woord.length, doc.lenght)
+        //         doc = deel1 + deel2;
+        //     }
+        //     document.write(doc);
+    </script>
+</body>
+
+</html>

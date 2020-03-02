@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // lege array naam cursisten
+        var cursisten = [];
+
+        function ingeven() {
+            var namen = prompt('Geef de naam van de cursist in. (typ 0 om te stoppen)', 'Jan');
+
+            if (namen == null) {
+                document.write('<br>U heeft geannuleerd');
+            } else if (namen.length == 0) {
+                document.write('<br>U heeft geen naam ingevuld');
+            } else if (namen == '0') {
+                alert('U bent gestopt met cursisten ingeven.');
+                document.write('De cursisten zijn: ' + namen);
+            }
+        }
+        ingeven();
+
+        function tonen() {
+            document.write('De cursisten zijn: ' + namen);
+        }
+
+        tonen();
+    </script>
+</body>
+
+</html>
